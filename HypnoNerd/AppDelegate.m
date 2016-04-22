@@ -22,12 +22,8 @@
     
     HypnosisViewController *hvc = [[HypnosisViewController alloc] init];
     
-    // pointer to object that represents the app bundle
-    NSBundle *appBundle = [NSBundle mainBundle];
-    
-    
     // look in the appBundle for the remainder.xib
-    RemainderViewController *rvc = [[RemainderViewController alloc] initWithNibName: @"RemainderViewController" bundle: appBundle];
+    RemainderViewController *rvc = [[RemainderViewController alloc] init];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = @[hvc, rvc];

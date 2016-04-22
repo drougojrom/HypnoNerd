@@ -29,10 +29,28 @@
     return self;
 }
 
+-(void)viewDidLoad
+{
+    // always call!
+    [super viewDidLoad];
+    
+    NSLog(@"HypnosisViewController loaded this view");
+}
+
 -(void)loadView
 {
+    
+    CGRect frame = [UIScreen mainScreen].bounds;
+    
     // create a view
-    HypnosisView *backgroundView = [[HypnosisView alloc] init];
+    HypnosisView *backgroundView = [[HypnosisView alloc] initWithFrame:frame];
+    
+    CGRect textFiledRect = CGRectMake(40, 70, 240, 30);
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:textFiledRect];
+    
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    [backgroundView addSubview:textField];
     
     // set it as "the" view of the view controller
     self.view = backgroundView;
