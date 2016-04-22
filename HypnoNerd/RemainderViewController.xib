@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RemainderViewController">
+            <connections>
+                <outlet property="datePicker" destination="BJr-JE-dQh" id="jCo-6n-Rb9"/>
+                <outlet property="view" destination="FHR-UM-HqG" id="KqM-Sg-3Ve"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="FHR-UM-HqG">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="BJr-JE-dQh">
+                    <rect key="frame" x="0.0" y="86" width="600" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="482760664.18755001">
+                        <!--2016-04-19 12:11:04 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5y2-aC-ANX">
+                    <rect key="frame" x="8" y="350" width="584" height="30"/>
+                    <state key="normal" title="Remind Me!"/>
+                    <connections>
+                        <action selector="addRemainder:" destination="-1" eventType="touchUpInside" id="BP6-8s-9dd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BJr-JE-dQh" firstAttribute="leading" secondItem="FHR-UM-HqG" secondAttribute="leading" id="0s5-ox-6Cu"/>
+                <constraint firstItem="5y2-aC-ANX" firstAttribute="leading" secondItem="FHR-UM-HqG" secondAttribute="leadingMargin" id="G1e-dJ-ae8"/>
+                <constraint firstAttribute="trailing" secondItem="BJr-JE-dQh" secondAttribute="trailing" id="VRF-d2-ahW"/>
+                <constraint firstItem="BJr-JE-dQh" firstAttribute="top" secondItem="FHR-UM-HqG" secondAttribute="top" constant="86" id="cQ5-19-37O"/>
+                <constraint firstItem="BJr-JE-dQh" firstAttribute="centerX" secondItem="5y2-aC-ANX" secondAttribute="centerX" id="hZS-RH-ER6"/>
+                <constraint firstItem="5y2-aC-ANX" firstAttribute="top" secondItem="BJr-JE-dQh" secondAttribute="bottom" constant="48" id="xur-ci-1jG"/>
+            </constraints>
+            <point key="canvasLocation" x="312" y="353"/>
+        </view>
+    </objects>
+</document>
