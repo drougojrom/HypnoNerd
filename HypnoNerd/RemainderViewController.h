@@ -10,5 +10,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RemainderViewController : UIViewController
--(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+
 @end

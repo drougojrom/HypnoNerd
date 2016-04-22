@@ -15,6 +15,25 @@
 
 @implementation RemainderViewController
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        // get the tbi
+        UITabBarItem *tbi = self.tabBarItem;
+        
+        // give it a name
+        tbi.title = @"Reminder";
+        
+        // give it an image
+        UIImage *i = [UIImage imageNamed:@"Time.png"];
+        tbi.image = i;
+    }
+    
+    return self;
+}
+
 -(IBAction)addRemainder:(id)sender
 {
     NSDate *date = self.datePicker.date;

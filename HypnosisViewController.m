@@ -11,6 +11,24 @@
 
 @implementation HypnosisViewController
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self){
+        // set the tab bar item's title
+        self.tabBarItem.title = @"Hypnotize";
+        
+        // create a UIImage from a file
+        UIImage *i = [UIImage imageNamed:@"Hypno.png"];
+        
+        // put the image on tab bar
+        self.tabBarItem.image = i;
+    }
+    
+    return self;
+}
+
 -(void)loadView
 {
     // create a view
