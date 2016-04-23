@@ -46,10 +46,12 @@
     HypnosisView *backgroundView = [[HypnosisView alloc] initWithFrame:frame];
     
     CGRect textFiledRect = CGRectMake(40, 70, 240, 30);
-    
     UITextField *textField = [[UITextField alloc] initWithFrame:textFiledRect];
     
     textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.placeholder = @"Hypnotize me!";
+    textField.returnKeyType = UIReturnKeyDone;
+    
     [backgroundView addSubview:textField];
     
     // set it as "the" view of the view controller
